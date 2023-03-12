@@ -15,4 +15,9 @@ public class MainMenu : MonoBehaviour
         Application.Quit();
         Debug.Log("Game Quit");
     }
+
+    public void windowActivation(GameObject _window)
+    {
+        _window.SetActive(!_window.activeSelf);
+    }
 }

@@ -7,8 +7,6 @@ public class Health : MonoBehaviour
 {
     [Range(0f, 100)]
     public float health;
-    //[Range(0, 60)]
-    //public float ammo;
 
     private float healthNormalized;
     public Image healthBar;
@@ -26,7 +24,7 @@ public class Health : MonoBehaviour
         healthSplat.color = new Color(healthSplat.color.r, healthSplat.color.g, healthSplat.color.b, healthFlip);
         healthNormalized = health / 100;
         healthBar.fillAmount = healthNormalized;
-        //ammoText.text = "Current Ammo: " + ammo;
+
     }
 
     // Update is called once per frame
@@ -37,12 +35,11 @@ public class Health : MonoBehaviour
         healthSplat.color = new Color(healthSplat.color.r, healthSplat.color.g, healthSplat.color.b, healthFlip);
         healthNormalized = health / 100;
         healthBar.fillAmount = healthNormalized;
-        //ammoText.text = "Current Ammo: " + ammo;
     }
 
     public void ReduceHealth(float _damage)
     {
-        if (health - _damage! < 0)
+        if (health - _damage! > 0)
         {
             health -= _damage;
         }

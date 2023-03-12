@@ -8,7 +8,7 @@ public class Ammo : MonoBehaviour
 {
     public int ammoCount;
     [SerializeField] private TextMeshProUGUI ammoText;
-    [SerializeField] private InputField inputField;
+    [SerializeField] private TMP_InputField inputField;
 
     // Start is called before the first frame update
     void Start()

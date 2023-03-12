@@ -2,14 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class PlayerName : MonoBehaviour
 {
     private string playerName;
 
-    [SerializeField] private Text nameText;
+    [SerializeField] private TextMeshProUGUI nameText;
 
-    [SerializeField] private InputField inputField;
+    [SerializeField] private TMP_InputField inputField;
 
     // Start is called before the first frame update
     void Start()
