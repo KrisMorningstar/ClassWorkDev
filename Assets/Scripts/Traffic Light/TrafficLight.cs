@@ -110,17 +110,17 @@ public class TrafficLight : MonoBehaviour
         public override void OnEnter()
         {
             instance.Renderer.material.color = Color.green;
-            Debug.Log("The light has turned green.");
+            //Debug.Log("The light has turned green.");
         }
 
         public override void OnUpdate()
         {
-            Debug.Log("The light is currently green.");
+            //Debug.Log("The light is currently green.");
         }
 
         public override void OnExit()
         {
-            Debug.Log("The light is no longer green");
+            //Debug.Log("The light is no longer green");
         }
     }
     public class YellowLight : TrafficLightState
@@ -137,7 +137,7 @@ public class TrafficLight : MonoBehaviour
         public override void OnEnter()
         {
             instance.Renderer.material.color = Color.yellow;
-            Debug.Log("The light has turned yellow.");
+            //Debug.Log("The light has turned yellow.");
         }
 
         public override void OnUpdate()
@@ -147,12 +147,12 @@ public class TrafficLight : MonoBehaviour
             {
                 instance.StateMachine.SetState(new RedLight(instance));
             }
-            Debug.Log("The light is currently yellow.");
+            //Debug.Log("The light is currently yellow.");
         }
 
         public override void OnExit()
         {
-            Debug.Log("The light is no longer yellow");
+            //Debug.Log("The light is no longer yellow");
         }
     }
     public class RedLight : TrafficLightState
@@ -165,17 +165,17 @@ public class TrafficLight : MonoBehaviour
         public override void OnEnter()
         {
             instance.Renderer.material.color = Color.red;
-            Debug.Log("The light has turned red.");
+            //Debug.Log("The light has turned red.");
         }
 
         public override void OnUpdate()
         {
-            Debug.Log("The light is currently red.");
+            //Debug.Log("The light is currently red.");
         }
 
         public override void OnExit()
         {
-            Debug.Log("The light is no longer red");
+            //Debug.Log("The light is no longer red");
         }
     }
 }
