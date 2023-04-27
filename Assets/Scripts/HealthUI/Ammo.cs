@@ -4,16 +4,25 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class Ammo : MonoBehaviour
+public class Ammo : MonoBehaviour, IDataPersistence
 {
-    public int ammoCount;
+    public int ammoCount = 80085;
     [SerializeField] private TextMeshProUGUI ammoText;
     [SerializeField] private TMP_InputField inputField;
+
+    public void LoadData(GameData _data)
+    {
+        this.ammoCount = _data.ammoCount;
+    }
+
+    public void SaveData(ref GameData _data)
+    {
+        _data.ammoCount = this.ammoCount;
+    }
 
     // Start is called before the first frame update
     void Start()
     {
-        ammoCount = 80085;
         ammoText.text = "Ammo: " + ammoCount;
     }
 
